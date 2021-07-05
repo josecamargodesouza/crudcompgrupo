@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-button slot="end" color="primary" (click)="novoCliente()">Novo Cliente</ion-button>
+    <ion-title>Clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let c of clientes">
+      <ion-item-options>
+        <ion-item-option color="danger" (click)="remover(c.id)">Deletar</ion-item-option>
+        <ion-item-option color="success" (click)="atualizar(c)">Atualizar</ion-item-option>
+      </ion-item-options>
+      <ion-item>{{c.nome}}</ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

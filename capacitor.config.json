@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "crudcompgrupo",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

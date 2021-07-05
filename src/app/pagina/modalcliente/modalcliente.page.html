@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-button slot="end" color="danger" (click)="fecharModal()">Fechar</ion-button>
+    <ion-title>{{atualizar ? 'Atualizar Cadastro' : 'Novo Cliente'}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="enviando(f)">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input [(ngModel)]="dados.nome" name="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">CPF</ion-label>
+      <ion-input [(ngModel)]="dados.cpf" name="cpf"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Endereço</ion-label>
+      <ion-input [(ngModel)]="dados.endereco" name="endereco"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Bairro</ion-label>
+      <ion-input [(ngModel)]="dados.bairro" name="bairro"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cidade</ion-label>
+      <ion-input [(ngModel)]="dados.cidade" name="cidade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Estado</ion-label>
+      <ion-input [(ngModel)]="dados.estado" name="estado"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">CEP</ion-label>
+      <ion-input [(ngModel)]="dados.cep" name="cep"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input [(ngModel)]="dados.email" name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Telefone</ion-label>
+      <ion-input [(ngModel)]="dados.telefone" name="telefone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Profissão</ion-label>
+      <ion-input [(ngModel)]="dados.profissao" name="profissao"></ion-input>
+    </ion-item>
+    <ion-button fill="outline" expand="block" type="submit">{{atualizar ? 'Confirmar atualização' : 'Confirmar cadastramento'}}</ion-button>
+  </form>
+</ion-content>
